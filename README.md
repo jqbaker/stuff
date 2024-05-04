@@ -11,3 +11,8 @@ FInputActionKeyMapping Left("Left", EKeys::Left, 0, 0, 0, 0);
 PlayerInput->AddActionMapping(Left);
 
 InputComponent->BindAction("Left", IE_Pressed, this, &AYour_PC::Left);
+
+	UPROPERTY(VisibleDefaultsOnly)
+		class UCameraComponent* Camera;
+  
+Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
